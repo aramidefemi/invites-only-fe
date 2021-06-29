@@ -7,7 +7,7 @@ const InvoicePage = () => {
   const obj = location.pathname.split('/')
   console.log(' location', obj);
  
-const url = `http://localhost:3000/invite/${obj[2]}`;
+const url = `https://aariz-birthday.herokuapp.com/invite/${obj[2]}`;
   return ( 
     <Result
     status="success"
