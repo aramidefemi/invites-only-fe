@@ -10,7 +10,7 @@ const api = (store) => (next) => async (action) => {
       action.payload = response?.data;
       return next(action);
     case 'GET_INVITE':
-      response = await get('/invite/'+action.payload.id); 
+      response = await get(action.payload); 
       action.payload = response?.data;
       return next(action);
       

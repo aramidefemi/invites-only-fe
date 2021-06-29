@@ -7,15 +7,9 @@ export default function applicationReducer(
   { type, payload }
 ) {
   switch (type) {
-    case 'GET_INVOICES': 
-      const new_state = { ...state, invoices: payload };
-      return new_state;
-    case 'GET_INVOICE': 
-      const GET_INVOICE = { ...state, invoice: payload };
-      return GET_INVOICE;
-    case 'GET_PAYMENT_STATS':  
-      const GET_PAYMENT_STATS = { ...state, stats: payload }; 
-      return GET_PAYMENT_STATS;
+    case 'GET_INVITE': 
+      const new_state = { ...state, ...payload };
+      return new_state; 
     default:
       return state;
   }

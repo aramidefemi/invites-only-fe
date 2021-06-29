@@ -17,7 +17,7 @@ export const logger = (store) => (next) => (action) => {
 export const errorNotification = (error) => {
   message.error(error)
 };
-const local = 'https://aariz.herokuapp.com';
+const local = 'http://localhost:5000';
 
 
 const handleError = (e) => {
