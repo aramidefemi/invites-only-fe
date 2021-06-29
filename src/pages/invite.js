@@ -11,8 +11,7 @@ const InvoicePage = () => {
     main
   } = useSelector((state) => state);
   const dispatch = useDispatch();
-
-  console.log(' location', location.pathname, main)
+ 
   useEffect(() => {
     dispatch({
       type: 'GET_INVITE',

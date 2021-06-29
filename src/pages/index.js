@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const [ form, setForm ] = useState({});
+  const [form, setForm] = useState({});
   const {
     main: {},
   } = useSelector((state) => state);
@@ -24,7 +24,12 @@ const HomePage = () => {
 
   return (
     <div id="container">
-      <h1>&bull; Keep in Touch &bull;</h1>
+      <h1>&bull; Aariz's 1st Birthday Party &bull;</h1>
+      <h2>&bull; Venue: Carritas Events centre Ebute Ibeshe Road Ikorodu &bull;</h2>
+      <h3>
+        &bull; 12:00 noon &bull;
+      </h3>
+      <h4>&bull; 11 July 2021 12noon &bull;</h4>
       <div className="underline"></div>
       <div className="icon_wrapper">
         <svg className="icon" viewBox="0 0 145.192 145.192"></svg>
