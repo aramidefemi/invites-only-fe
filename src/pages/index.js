@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { message } from 'antd';
+
+import { Radio } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 
 const HomePage = () => {
@@ -22,13 +23,17 @@ const HomePage = () => {
     });
   };
 
+  const options = [
+    { label: 'Yes', value: true },
+    { label: 'No', value: false }, 
+  ];
   return (
     <div id="container">
       <h1>&bull; Aariz's 1st Birthday Party &bull;</h1>
-      <h2>&bull; Venue: Carritas Events centre Ebute Ibeshe Road Ikorodu &bull;</h2>
-      <h3>
-        &bull; 12:00 noon &bull;
-      </h3>
+      <h2>
+        &bull; Venue: Carritas Events centre Ebute Ibeshe Road Ikorodu &bull;
+      </h2>
+      <h3>&bull; 12:00 noon &bull;</h3>
       <h4>&bull; 11 July 2021 12noon &bull;</h4>
       <div className="underline"></div>
       <div className="icon_wrapper">
@@ -55,7 +60,23 @@ const HomePage = () => {
           onChange={handleFormChanges}
         />
       </div>
+      <div className="telephone">
+        <h2>Are you coming with a plus one?</h2>
+    
+        <Radio.Group
+          options={options}
+          onChange={handleFormChanges}
+          buttonStyle="solid"
+          name="hasPlusOne"
+          optionType="button"
+          defaultValue={false}
+        />
 
+    
+      </div>
+<br/>
+<br/>
+<br/>
       <div className="submit">
         <input
           type="submit"

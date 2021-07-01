@@ -8,17 +8,25 @@ html {
 
 body {
   background: #F2F3EB;
+  background-image: url(https://www.pjmasks.com/wp-content/uploads/sites/2/2019/11/68598279-6687c200-0496-11ea-99cd-b2438cbe2ac0.jpg);
+}
+body {
+  background-position: center;
 }
 
 button {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   color: #5A5A5A;
   font: inherit;
   margin: 0;
@@ -33,11 +41,19 @@ textarea {
 }
 
 #container {
-  border: solid 3px #474544;
+  border: solid 3px #fff;
   max-width: 768px;
   margin: 60px auto;
   position: relative;
   padding: 20px;
+  background-color: rgba(0, 0, 0, .5);
+}
+.ant-result { 
+  background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+    min-width: 350px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 form {
@@ -45,8 +61,29 @@ form {
   margin: 50px 0;
 }
 
+.plusOne {
+  display: flex;
+  flex-direction: column;
+
+  .from-grp {
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+
+    label {
+      position: relative;
+      bottom: 9px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    input {}
+
+  }
+}
+
 h1 {
-  color: #474544;
+  color: #fff;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 7px;
@@ -54,8 +91,21 @@ h1 {
   text-transform: uppercase;
 }
 
+.ant-result-subtitle{
+  contain: content;
+}
+h2,
+h3,
+h4,
+h5,
+.ant-result-title,
+.ant-result-subtitle,
+label {
+  color: #fff;
+}
+
 .underline {
-  border-bottom: solid 2px #474544;
+  border-bottom: solid 2px #fff;
   margin: -0.512em auto;
   width: 80px;
 }
@@ -67,53 +117,58 @@ h1 {
 
 .icon {
   display: block;
-  fill: #474544;
+  fill: #fff;
   height: 50px;
   margin: 0 auto;
   width: 50px;
 }
 
 .email {
-	float: right;
-	width: 45%;
+  float: right;
+  width: 45%;
 }
 
-input[type='text'], [type='email'], select, textarea {
-	background: none;
+input[type='text'],
+[type='email'],
+select,
+textarea {
+  background: none;
   border: none;
-	border-bottom: solid 2px #474544;
-	color: #474544;
-	font-size: 1.000em;
+  border-bottom: solid 2px #fff;
+  color: #fff;
+  font-size: 1.000em;
   font-weight: 400;
   letter-spacing: 1px;
-	margin: 0em 0 1.875em 0;
-	padding: 0 0 0.875em 0;
+  margin: 0em 0 1.875em 0;
+  padding: 10px;
   text-transform: uppercase;
-	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-input[type='text']:focus, [type='email']:focus, textarea:focus {
-	outline: none;
-	padding: 0 0 0.875em 0;
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+  outline: none;
+  padding: 10px;
 }
 
 .message {
-	float: none;
+  float: none;
 }
 
 .name {
-	float: left;
-	width: 100%;
+  float: left;
+  width: 100%;
 }
 
 select {
@@ -136,34 +191,34 @@ select::-ms-expand {
 }
 
 textarea {
-	line-height: 150%;
-	height: 150px;
-	resize: none;
+  line-height: 150%;
+  height: 150px;
+  resize: none;
   width: 100%;
 }
 
 ::-webkit-input-placeholder {
-	color: #474544;
+  color: #fff;
 }
 
-:-moz-placeholder { 
-	color: #474544;
-	opacity: 1;
+:-moz-placeholder {
+  color: #fff;
+  opacity: 1;
 }
 
 ::-moz-placeholder {
-	color: #474544;
-	opacity: 1;
+  color: #fff;
+  opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: #474544;
+  color: #fff;
 }
 
 #form_button {
   background: none;
-  border: solid 2px #474544;
-  color: #474544;
+  border: solid 2px #fff;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: 'Helvetica', Arial, sans-serif;
@@ -173,15 +228,15 @@ textarea {
   padding: 20px 35px;
   text-transform: uppercase;
   -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #form_button:hover {
-  background: #474544;
-  color: #F2F3EB;
+  background: #fff;
+  color: #040c74;
 }
 
 @media screen and (max-width: 768px) {
@@ -189,19 +244,25 @@ textarea {
     margin: 20px auto;
     width: 95%;
   }
+  body {
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 26px;
   }
-  
+
   .underline {
     width: 68px;
   }
-  
+
   #form_button {
     padding: 15px 25px;
+  }
+  body {
+    background-position: center;
   }
 }
 
@@ -209,17 +270,23 @@ textarea {
   h1 {
     font-size: 18px;
   }
-  
+
   .icon {
     height: 35px;
     width: 35px;
   }
-  
+
   .underline {
     width: 53px;
   }
-  
-  input[type='text'], [type='email'], select, textarea {
+
+  input[type='text'],
+  [type='email'],
+  select,
+  textarea {
     font-size: 0.875em;
+  }
+  body {
+    background-position: center;
   }
 }

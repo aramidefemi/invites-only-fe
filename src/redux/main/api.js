@@ -8,6 +8,7 @@ const api = (store) => (next) => async (action) => {
     case 'REQUEST_INVITE':
       response = await post('/create/invite/', action.payload); 
       action.payload = response?.data;
+      message.success('Successfully sent. Your barcode to gain access to the event will be sent shortly')
       return next(action);
     case 'GET_INVITE':
       response = await get(action.payload); 

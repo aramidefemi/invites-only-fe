@@ -1,29 +1,29 @@
-import React, { useEffect} from 'react';
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Result, Button } from 'antd';
 
 const InvoicePage = () => {
-  
   const location = useLocation();
-  
-  const {
-    main
-  } = useSelector((state) => state);
+
+  const { main } = useSelector((state) => state);
   const dispatch = useDispatch();
- 
+
   useEffect(() => {
     dispatch({
       type: 'GET_INVITE',
-      payload: location.pathname
+      payload: location.pathname,
     });
   }, []);
 
-  return ( 
-    <Result
-    icon={<img src={main?.url} />}
-    title={`Hello ${main?.fullname}, we have your invite ready for you!`}
-  />
+  return (
+    <body>
+      <Result
+        icon={<img src={main?.url} />}
+        title={`Hello ${main?.fullname}`}
+        subTitle={main.hasPlusOne ? 'This barcode only admits 2 persons and should be presented at the entrance of the venue to gain access to the event.' : `This barcode only admits 1 person and should be presented at the entrance of the venue to gain access to the event.`}
+      />
+    </body>
   );
 };
 

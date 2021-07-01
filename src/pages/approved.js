@@ -12,7 +12,7 @@ const url = `https://aariz-birthday.herokuapp.com/invite/${obj[2]}`;
     <Result
     status="success"
     title={`We've Successfully Approved ${obj[3]}`}
-    subTitle={`Invite link:  "${url}"  phone number: ${obj[4]} `}
+    subTitle={`Invite link: \n "${url}" \n  Phone number: 0${obj[4]} `}
     extra={[ 
       <Button href={`https://wa.me/+234${obj[4]}?text=Here%20is%20your%20special%20invite%20%20${url}`}>Share to Whatsapp</Button>,
     ]}
