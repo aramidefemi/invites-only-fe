@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 
 import { Radio } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
+import { Button } from 'antd';
 
 const HomePage = () => {
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({});
   const {
     main: {},
@@ -17,6 +19,9 @@ const HomePage = () => {
     setForm(newState);
   };
   const handleSubmit = () => {
+    setLoading(true)
+    
+    setTimeout(()=>setLoading(false), 3000)
     dispatch({
       type: 'REQUEST_INVITE',
       payload: form,
@@ -78,12 +83,13 @@ const HomePage = () => {
 <br/>
 <br/>
       <div className="submit">
-        <input
+        <Button
           type="submit"
           onClick={handleSubmit}
-          value="Send Message"
+          
           id="form_button"
-        />
+          loading={loading}
+        > Send Message </Button>
       </div>
     </div>
   );
