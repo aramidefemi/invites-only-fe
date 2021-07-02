@@ -21,7 +21,14 @@ const InvoicePage = () => {
       <Result
         icon={<img src={main?.url} />}
         title={`Hello ${main?.fullname}`}
-        subTitle={main.hasPlusOne ? 'This barcode only admits 2 persons and should be presented at the entrance of the venue to gain access to the event.' : `This barcode only admits 1 person and should be presented at the entrance of the venue to gain access to the event.`}
+        subTitle={
+          main.hasPlusOne
+            ? `This barcode only admits 2 persons and should be presented at the entrance of the venue to gain access to the event. AARIZ @1
+        11-7-21 
+        12 NOON
+        CARITAS EVENT CENTRE EBUTE IBESHE ROAD IKORODU`
+            : `This barcode only admits 1 person and should be presented at the entrance of the venue to gain access to the event.`
+        }
       />
     </body>
   );
