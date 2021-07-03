@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Radio } from 'antd';
+import { Radio, Result } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'antd';
 
@@ -19,9 +19,9 @@ const HomePage = () => {
     setForm(newState);
   };
   const handleSubmit = () => {
-    setLoading(true)
-    
-    setTimeout(()=>setLoading(false), 3000)
+    setLoading(true);
+
+    setTimeout(() => setLoading(false), 150000);
     dispatch({
       type: 'REQUEST_INVITE',
       payload: form,
@@ -30,8 +30,15 @@ const HomePage = () => {
 
   const options = [
     { label: 'Yes', value: true },
-    { label: 'No', value: false }, 
+    { label: 'No', value: false },
   ];
+  if (loading)
+    return (
+      <Result
+        status="success"
+        title={`Your barcode to gain access to the event will be sent shortly`}
+      />
+    );
   return (
     <div id="container">
       <h1>&bull; Aariz's 1st Birthday Party &bull;</h1>
@@ -67,7 +74,7 @@ const HomePage = () => {
       </div>
       <div className="telephone">
         <h2>Are you coming with a plus one?</h2>
-    
+
         <Radio.Group
           options={options}
           onChange={handleFormChanges}
@@ -76,20 +83,20 @@ const HomePage = () => {
           optionType="button"
           defaultValue={false}
         />
-
-    
       </div>
-<br/>
-<br/>
-<br/>
+      <br />
+      <br />
+      <br />
       <div className="submit">
         <Button
           type="submit"
           onClick={handleSubmit}
-          
           id="form_button"
           loading={loading}
-        > Send Message </Button>
+        >
+          {' '}
+          Send Message{' '}
+        </Button>
       </div>
     </div>
   );
